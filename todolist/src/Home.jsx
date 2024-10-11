@@ -6,15 +6,15 @@ import axios from 'axios'
 const Home = () => {
     const [todos, setTodods] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:3001/get').then(res => setTodods(res.data)).catch(err => console.log(err))
+        axios.get('https://todolist-backend-a4y6.onrender.com/get').then(res => setTodods(res.data)).catch(err => console.log(err))
     }, [])
     const handleedit = (id)=>{
-          axios.put('http://localhost:3001/update/'+id).then(result=>console.log(result)).catch(err=>console.log(err))
+          axios.put('https://todolist-backend-a4y6.onrender.com/update/'+id).then(result=>console.log(result)).catch(err=>console.log(err))
           location.reload()
     }
 
     const handledelete = (id)=>{
-        axios.delete('http://localhost:3001/delete/'+id).then(result=>{location.reload()}).catch(err=>console.log(err))
+        axios.delete('https://todolist-backend-a4y6.onrender.com/delete/'+id).then(result=>{location.reload()}).catch(err=>console.log(err))
 
     }
 
