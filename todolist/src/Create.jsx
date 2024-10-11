@@ -4,7 +4,7 @@ import axios from 'axios'
 const Create = () => {
     const [task,setTask] = useState();
     const handleclick = ()=>{
-        axios.post('http://localhost:3001/add',{task:task}).then(result => {location.reload()}).catch(err=>console.log(err))
+        axios.post('https://todolist-backend-a4y6.onrender.com/add',{task:task}).then(result => {location.reload()}).catch(err=>console.log(err))
 
     }
   return (
